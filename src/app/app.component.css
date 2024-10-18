@@ -1,0 +1,8 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://img.freepik.com/premium-photo/cute-dog-wearing-army-uniform_876282-5105.jpg');
+  background-size: cover;
+}

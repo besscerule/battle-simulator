@@ -1,7 +1,32 @@
 <main>
-      <h1>Hello, {{ title }}</h1>
-      <app-battle-details></app-battle-details>
-      <app-battle-result></app-battle-result>
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Howard's Battle Simulator</mat-card-title>
+      <mat-card-subtitle>For the Battle-iest of BATTLES!</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://img.freepik.com/premium-photo/cute-dog-wearing-army-uniform_876282-5105.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>Please fill out the below details...</p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Team A Size</mat-label>
+          <input type="number" matInput [formControl]="teamASizeFormControl">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Team B Size</mat-label>
+          <input type="number" matInput [formControl]="teamBSizeFormControl">
+        </mat-form-field>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button (click)="simulateBattle()">SIMULATE BATTLE</button>
+    </mat-card-actions>
+    <mat-card-content>
+      <h2 *ngIf="formattedResult">Team A has a {{formattedResult}}% chance of winning!</h2>
+    </mat-card-content>
+  </mat-card>
 </main>
-
 <router-outlet />
