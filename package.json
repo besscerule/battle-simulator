@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:prod": "ng build --prod",
+    "deploy:prod": "ng deploy --base-href=/battle-simulator/ --repo=https://github.com/besscerule/battle-simulator.git",
     "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage"
   },
   "private": true,
